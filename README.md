@@ -67,14 +67,35 @@ Before you officially start practicing the project, it is strongly recommended t
 | 50    | [Insect Catch Game](https://github.com/bradtraversy/50projects50days/tree/master/insect-catch-game) | [Live Demo](https://50projects50days.com/projects/insect-catch-game/) |
 | 51    | [Simple Timer](https://github.com/bradtraversy/50projects50days/tree/master/simple-timer) | [Live Demo](https://50projects50days.com/projects/simple-timer/) |
 
+## Step 1
+
+Learn the three basic skills provided above: `HTML`, `CSS` and `JavaScript.`
+
+| Document        | Contents          |
+| --------------- | ----------------- |
+| base_HTML       | HTML Basics       |
+| base_CSS        | CSS Basics        |
+| base_javascript | javascript Basics |
+
+工具推荐：VScode
+
+扩展插件：Mithril Emmet、Live Server、Auto Rename Tag、Prettier - Code formatter
+
+## Step 2
+
+Exercise Project.
+
+| Document | Contents               |
+| -------- | ---------------------- |
+| projects | All exercises projects |
+
+## Step 3
+
+Build your own project.
+
+| Document        | Contents |
+| --------------- | -------- |
+| custom_projects | TODO     |
 
 
-# How to use React Project
 
-1. Install Node.
-
-2. Choose a specific project directory, such as "react/tutorial-tic-tac-toe."
-
-3. Run `npm install` to install dependencies.
-
-4. Run `npm start` to start the local server and follow the instructions to view the running effect in your browser.
