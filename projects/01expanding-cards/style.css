@@ -1,0 +1,73 @@
+/* import google fonts https://fonts.google.com/selection/embed */
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    margin: 0;;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    /* 表示容器的宽度为视口宽度的 90%。vw 是视口宽度单位，1 vw 等于视口宽度的 1% */
+    width: 90vw; 
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* 高度占容器的80% */
+    height: 80vh;
+    /* 圆角 */
+    border-radius: 50px;
+    /* 字体颜色：白色 */
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    /* 图片之间的间距 */
+    margin: 10px;
+    /* 字体使用相对位置 */
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom:  20px;
+    left: 20px;
+    margin: 0;
+    /* 默认字体透明度为0 */
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+    /* 给字体加一个过渡，避免下坠的使用体验 */
+    transition: opacity 0.3s ease-in;
+}
+
+.panel.active h3 {
+    opacity: 1;
+}
+
+/* 在屏幕小于 480 时隐藏最后 2 张图片 */
+@media (max-width:480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
