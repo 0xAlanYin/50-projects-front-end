@@ -1,0 +1,142 @@
+body {
+    /* 选择 Tag */
+    background-color: aliceblue;
+    color: #555555;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: normal;
+
+    /* 语法效果一样 */
+    /* font: normal 16px Arial, Helvetica, sans-serif; */
+
+    /* 行高度 */
+    line-height: 1.5em;
+}
+
+.box1 {
+    background-color: rgb(214, 204, 184);
+     /* 可以覆盖body指定的颜色 */
+    color: rgb(172, 127, 255);
+
+    /* 边框示例 */
+    /* border: 5px blue; */
+    border-top: 5px beige;
+    border-right: 10px red;
+    border-bottom: 15px yellow;
+    border-left: 20px green;
+
+    border-bottom-width: 10px;
+
+    margin-top: 40px;
+}
+
+.box1 h1 {
+    font-weight: 8000;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    /* 字间距 */
+    letter-spacing: 1em;
+    /* 词间距 */
+    word-spacing: 1em;
+}
+
+/* .box2 {
+    border-top: 5px beige;
+    border-right: 10px red;
+    border-bottom: 15px yellow;
+    border-left: 20px green;
+    border-bottom-width: 10px;
+    margin-top: 40px; 
+} */
+
+.box2 h1 {
+    text-align: center;
+}
+
+
+.container {
+    /* 修改宽度 */
+    width: 80%;
+    /* 居中 */
+    margin: auto;
+}
+
+
+/* 测试列表 */
+
+/* 修改 li 前面默认的点 */
+.list li {
+    list-style-image: url("../imag/test.jpg");
+    list-style: square;
+}
+
+button {
+    background-color: aqua;
+    padding: 10px 15px;
+}
+
+button:hover {
+    background-color: blueviolet;
+}
+
+button:active {
+    background-color: bisque;
+}
+
+a {
+    /* 不要下划线 */
+    text-decoration: none;
+    color: blueviolet;
+}
+
+a:hover {
+    color: aqua;
+}
+
+
+/* 测试浮动 */
+.block {
+    float: left;
+    width: 33.3%;
+    border: 1px solid chocolate;
+    /*解决加了边框换行问题 */
+    box-sizing: border-box;
+}
+
+.cleardix{
+    clear: both;
+}
+
+#main-block{
+    float: left;
+    width: 70%;
+    border: 1px solid chocolate;
+    box-sizing: border-box;
+}
+
+
+#sidebar{
+    float: right;
+    width: 30%;
+    border: 1px solid chocolate;
+    box-sizing: border-box;
+}
+
+/* 高级选择器演示 */
+.list2 li:nth-child(even){
+    background-color: rgb(138, 182, 221);
+}
+
+.list2 li:first-child {
+    background-color: indianred;
+}
+
+.box2 {
+    position: relative;
+    /* 基于当前页面的绝对值 */
+    /* position: absolute; */
+    top: 30px;
+    left: 30px;
+}
