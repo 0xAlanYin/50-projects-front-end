@@ -1,0 +1,30 @@
+<!-- "!" is shortcut key generate initial html template-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- import font-awesome -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- refer css file -->
+    <link rel="stylesheet" href="style.css"> 
+    <title>Progress Steps</title>
+</head>
+<body>
+    <div class="container">
+        <div class="progress-container">
+            <div class="progress" id="progress"></div>
+               <div class="circle active">1</div>
+               <div class="circle">2</div>
+               <div class="circle">3</div>
+               <div class="circle">4</div>
+        </div>
+
+        <button class="btn" id="prev" disabled>pre</button>
+        <button class="btn" id="next">next</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- 用途：购物车、表单等 -->
+ <!-- 比如医院的体检引导路线  -->
