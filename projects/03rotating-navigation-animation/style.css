@@ -1,0 +1,155 @@
+/* import google fonts https://fonts.google.com/selection/embed */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #333;
+    color: #222;
+    margin: 0;;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: #fafafa;
+    /* 默认旋转是以页面的中心点，改为左上角 */
+    transform-origin: top left;
+    /* 设置旋转的速度与效果 */
+    transition: transform 0.6s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.container.show-nav {
+    /* 旋转 20 度 */
+    transform: rotate(-20deg);
+}
+
+/* 设置图标的位置 */
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle {
+    background-color: #ff7979;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.6s linear;
+}
+
+.container.show-nav .circle {
+    /* 展示出 x 关闭的图标 */
+    /* todo */
+    transform: rotate(-70deg);
+}
+
+.circle button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    color: #fff;
+}
+
+.circle button:focus {
+    outline: none;
+}
+
+nav {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    /* z-index 属性用于控制元素的堆叠顺序。值越大，元素越靠上。这里设置为 100，意味着这个 nav 元素会在其他较低 z-index 值的元素之上显示。 */
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 30px;
+}
+
+nav ul li {
+    text-transform: uppercase;
+    color: #fff;
+    margin: 40px 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in;
+}
+
+nav ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+nav ul li + li {
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+
+nav ul li + li + li {
+    margin-left: 30px;
+    transform: translateX(-200%);
+}
+
+nav a{
+    color: #fafafa;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+  
+nav a:hover {
+    color: #FF7979;
+    font-weight: bold;
+}
+
+.circle button#open{
+    left: 60%;
+}
+
+.circle button#close{
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+/* 增加转向的延迟 */
+.container.show-nav + nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+
+.container img{
+    max-width: 100%;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.content h1 {
+    margin: 0;
+}
+
+.content small {
+    color: #555;
+    font-size: italic;
+}
+
+.content p {
+    color: #333;
+    /* 行高 */
+    line-height: 1.5;
+}
