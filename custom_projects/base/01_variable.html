@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量</title>
+    <script>
+       /*
+       *   var
+       *       - 没有块级作用域
+       *   let
+       *       - 有块级作用域
+       *   const
+       *       - 和let类似，具有块级作用域，但是它只能赋值一次
+       *       - 使用场景：
+       *           1. 对于一些常量可以使用const声明
+       *           2. 对于一些对象（函数）也可以使用const声明
+       *                  这样可以避免对象（函数）被意外修改
+       * */
+        {
+            let a = 10
+        }
+        // console.log(a); // a is not defined,because let is block scope.
+
+        for (let i = 0; i < 5; i++) {
+            console.log("loop ->", i)
+        }
+
+        // console.log("outside loop:", i)
+
+        // 以前为了解决这个问题，使用全局变量，或者使用闭包，现在可以使用const来解决这个问题
+        (function(){
+            if(false){
+                var b = 10;
+            }
+        })();
+
+        if(false){
+            let b = 10;
+        }
+        // console.log(b); // undefined
+
+        const c = 44;
+        // c = 'hi'; // TypeError: Assignment to constant variable.
+
+        const PI = 3.14;
+
+        const obj = {
+            name: 'tom',
+            age: 18
+        }
+        obj.age = 20;
+
+        console.log("age:",obj.age);
+
+        const fn = function(){
+            console.log('fn');
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+</html>

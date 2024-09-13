@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>解构赋值</title>
+    <!-- 简化代码 -->
+    <script>
+
+        // let arr = ['Alan', 'Bob'];
+
+        // let a,b;
+        // a = arr[0];
+        // b = arr[1];
+
+        // 等价方式1
+        // [a,b] = arr;
+
+        // 等价方式2
+        // const [a,b] = arr;
+
+        // =====================================
+        function fn(){
+            return ['Alan', 'Bob','Cindy'];
+        }
+        // const [a,b] = fn();
+        // console.log(a,b);
+
+        // arr = ['孙悟空', '猪八戒', '沙和尚', '唐僧'];
+        // // const [a,b,,c] = arr;
+        // const [a,b,...c] = arr;
+        // console.log(a,b,c);
+
+
+        // =====================================
+        // 对象解构
+        const obj = {
+            name: 'tom',
+            age: 18,
+            sex: 'boy'
+        }
+
+        let a,b,c;
+
+        // ({name:a,age:b,sex:c} = obj);// 【复杂，不推荐】将name赋值给a，age赋值给b，sex赋值给c
+        // console.log(a,b,c);
+
+        // const {name,age,sex} = obj; // 简洁，推荐使用; 如果变量名和属性名一致，则可以只写一个变量名
+        // console.log(name,age,sex);
+
+        // =====================================
+        // 利用数组的解构来交换两个变量的位置
+        a = 10;
+        b = 20;
+
+        [a,b] =[b,a]; // 交换变量a和b的位置
+        console.log(a,b);
+
+        let arr = [1,3,2];
+        [arr[1],arr[2]] = [arr[2],arr[1]]; // 交换数组arr的两个元素的位置
+
+        console.log(arr);
+    </script>
+
+</head>
+
+<body>
+
+</body>
+</html>

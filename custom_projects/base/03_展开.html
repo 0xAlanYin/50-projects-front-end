@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>展开</title>
+    <script>
+    /**
+     * 可以通过 ... 展开数组或者对象
+     * */
+
+     function fn(a,b,c){
+         return a + b + c;
+     }
+
+     const arr = [1,2,3];
+
+     let result = fn(...arr);
+     // 等效于 result = fn(arr[0],arr[1],arr[2]);
+     console.log(result);
+
+    const arr2 = [7,8,9, ...arr,4,5,6];
+    console.log(arr2);
+
+    // =====================================
+    // 对象展开
+    const obj = {
+         name: 'tom',
+         age: 18,
+         sex: 'boy'
+     }
+
+     const obj2 = {
+        address: 'beijing',
+        ...obj,
+        email: '<EMAIL>'
+     }
+     console.log(obj2);
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+</html>
